@@ -11,7 +11,7 @@ Dyfused（发音：/dʌɪˈfjuːzd/）
 
 - [空白服](/servers/kongbai.md)
 
-## 讨饭
+## [讨饭](donate)
 
 支付宝：3070190799[at]qq.com
 PayPal：r0yalist[at]outlook.com
