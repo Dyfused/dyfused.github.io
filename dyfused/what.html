@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --color-spring-green: #00FF7F;
+            --color-spring-green-shadow: #00a251;
+
+            --color-spring-green-title: #00832c;
+            --color-spring-green-title-shadow: #005c1f;
+        }
+
+        #container {
+            max-width: 60vw;
+            margin: 0 auto;
+        }
+
+        .shadow-box {
+            border-radius: 2em;
+
+            background-color: var(--color-spring-green);
+            box-shadow: 0 .2em .1em var(--color-spring-green-shadow);
+
+            margin-bottom: 2em;
+        }
+
+        .shadow-box .title {
+            margin: 0;
+            margin-right: auto;
+            width: max-content;
+
+            padding: .2em 1em;
+
+            border-radius: 2em;
+            background-color: var(--color-spring-green-title);
+
+            color: white;
+
+            box-shadow: 0 .1em .1em var(--color-spring-green-title-shadow);
+        }
+
+        .shadow-box .content {
+            padding: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="shadow-box" id="introduction">
+            <h1 class="title">炸药侦错</h1>
+            <div class="content">
+                <p>你好，来自{source}的用户。</p>
+                <p>这是 Dynamite Dyfused 客户端侦错页面，如果你是从其他来源打开的此页面，可以直接关闭。</p>
+            </div>
+        </div>
+        <div class="shadow-box" id="dump">
+            <h1 class="title">游戏数据</h1>
+            <div class="content" id="client-dump">
+                <p>游戏版本：{game_version}</p>
+            </div>
+        </div>
+        <div class="shadow-box" id="dump">
+            <h1 class="title">服务器数据</h1>
+            <div class="content" id="server-dump">
+                <p>服务器地址：{server_backend}</p>
+                <p>服务器资源地址：{server_resource}</p>
+                <p>联机大厅服务器地址：{server_photon}</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function updateTemplate(selector, data) {
+            let element = document.querySelector(selector)
+            let content = element.innerHTML
+            for (key in data) {
+                content = content.replace(`{${key}}`, data[key])
+            }
+            element.innerHTML = content
+        }
+
+        (function () {
+            // this should only invoke once
+
+            let parseResult = {};
+            decodeURI(window.location.search).substring(1).split("&").forEach((part, index) => {
+                let sp = part.split(/=/, 2)
+                parseResult[sp[0]] = decodeURI(sp[1])
+            })
+
+            console.log(parseResult);
+
+            function d(key) {
+                return parseResult[key]
+            }
+
+            function bold(text) {
+                return `<b>${text}</b>`
+            }
+
+            function italic(text) {
+                return `<i>${text}</i>`
+            }
+
+            updateTemplate("#introduction", {
+                "source": d("s") || italic("未知来源")
+            })
+
+            updateTemplate("#client-dump", {
+                "game_version": d("v") || italic("未知版本") + "（缺少重要数据）"
+            })
+
+            updateTemplate("#server-dump", {
+                "server_backend": d("b") || italic("无效服务器"),
+                "server_resource": d("r") || italic("无效服务器"),
+                "server_photon": d("p") || italic("无效服务器")
+            })
+        })()
+    </script>
+</body>
+
+</html>
