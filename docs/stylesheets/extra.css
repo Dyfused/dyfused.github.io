@@ -1,0 +1,8 @@
+@font-face {
+    font-family: "Source Han Sans";
+    src: url("fonts/SourceHanSansSC-Regular.otf") format("opentype");
+}
+
+:root {
+    --md-text-font: "Source Han Sans";
+}

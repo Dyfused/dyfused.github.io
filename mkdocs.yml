@@ -1,0 +1,39 @@
+theme:
+  name: material
+  palette: 
+    scheme: default
+    primary: indigo
+    accent: indigo
+  language: zh-Hant
+  logo: assets/logo.jpg
+  font: false
+  features:
+    - navigation.instant
+    - search.suggest
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - index.md
+  - donate/index.md
+  - install.md
+  - 额外功能:
+    - additional-features/login-commands.md
+    - additional-features/server-switch.md
+
+site_name: Dyfused Organization
+repo_url: https://github.com/dyfused/dyfused.github.io
+
+site_description: Official Site of Dyfused Committee
+site_author: Dyfused Committee
+copyright: All Rights Reserved

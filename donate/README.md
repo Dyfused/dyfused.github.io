@@ -1,2 +1,0 @@
-![](alipay.JPG)
-![](wechatpay.JPG)
