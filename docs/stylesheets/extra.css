@@ -1,8 +1,10 @@
 @font-face {
-    font-family: "Source Han Sans";
-    src: url("fonts/SourceHanSansSC-Regular.otf") format("opentype");
+    font-family: "SarasaMonoSC";
+    src: url("fonts/SarasaMonoSC-Regular.ttf") format("truetype");
 }
 
 :root {
-    --md-text-font: "Source Han Sans";
+    /* --md-text-font: "Taipei Sans"; */
+    --md-text-font: "SarasaMonoSC";
+    --md-code-font: "SarasaMonoSC";
 }

@@ -4,7 +4,7 @@ theme:
     scheme: default
     primary: indigo
     accent: indigo
-  language: zh-Hant
+  language: zh
   logo: assets/logo.jpg
   font: false
   features:
@@ -36,4 +36,4 @@ repo_url: https://github.com/dyfused/dyfused.github.io
 
 site_description: Official Site of Dyfused Committee
 site_author: Dyfused Committee
-copyright: All Rights Reserved
+copyright: CC-BY-NC (Articles and Images, if not mentioned)
