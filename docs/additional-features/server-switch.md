@@ -28,35 +28,19 @@ ssewogICAgIlNlcnZlcklkIjogInJlYm9vdCIsCiAgICAiU2VydmVyR3JhcGhxbEJhY2tlbmQiOiAiaH
 
 #### 未编码转服码格式
 
-仅支持 JSON，不可使用 `//` 注释。
+仅支持 JSON，不可使用 `//` 注释，如果使用了下面的模板，请删除注释后使用。
 
 ```json5
 {
-    // 配置版本
-    "ConfigVersion": 1,
-    // 旧版遗留字段
-    "GraphQl": null,
-    // 旧版遗留字段
-    "Resource": null,
-    // 旧版遗留字段
-    "PhotonMaster": null,
-    // 当前服务器信息
-    "ServerInfo": {
-        // 服务器 ID
-        "ServerId": "Explode",
-        // 服务器后端 GraphQL 地址
-        "ServerGraphqlBackend": "http://example.com:10443/graphql",
-        // 服务器资源下载地址
-        "ServerResourceDownloadBase": "http://example.com:10443",
-        // 服务器多人联机 PhotonMaster 地址
-        "ServerPhotonMasterAddress": "example.com:4530",
-        // 服务器登录信息
-        // [REDACTED] 为已经抹除的信息，默认该字段是加密的，
-        // 请不要泄露给他人！
-        "Properties": {
-            "LastLoginUsername": "[REDACTED]",
-            "LastLoginPassword": "[REDACTED]"
-        }
-    }
+    // 服务器ID - 用于定位本地资源的名称
+    // 不能包含当前系统不允许出现在路径里的字符，例如 '<' 不能出现在 Windows 里
+    // 建议仅使用英文大小写和数字
+    "ServerId": "Explode",
+    // 后端地址 - 服务器地址
+    "ServerGraphqlBackend": "http://34.92.242.92:10443/graphql",
+    // 资源地址 - 访问和下载游戏数据的根地址
+    "ServerResourceDownloadBase": "http://34.92.242.92:10443",
+    // 联机服务器地址 - 处理联机相关事务的服务器地址
+    "ServerPhotonMasterAddress": null
 }
 ```
