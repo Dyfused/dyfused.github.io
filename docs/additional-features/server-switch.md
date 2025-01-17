@@ -12,10 +12,10 @@ ss{转服码}
 
 ## 现有转服码
 
-最后更新：2023/9/15
+最后更新：2025/1/17
 
 ``` title="Explode"
-ssewogICAgIlNlcnZlcklkIjogIkV4cGxvZGUiLAogICAgIlNlcnZlckdyYXBocWxCYWNrZW5kIjogImh0dHA6Ly8zNC45Mi4yNDIuOTI6MTA0NDMvZ3JhcGhxbCIsCiAgICAiU2VydmVyUmVzb3VyY2VEb3dubG9hZEJhc2UiOiAiaHR0cDovLzM0LjkyLjI0Mi45MjoxMDQ0MyIsCiAgICAiU2VydmVyUGhvdG9uTWFzdGVyQWRkcmVzcyI6IG51bGwKfQ==
+ssewogICAgIlNlcnZlcklkIjogIkV4cGxvZGUiLAogICAgIlNlcnZlckdyYXBocWxCYWNrZW5kIjogImh0dHA6Ly8xMjQuMjIxLjMuMTE2OjEwNDQzL2dyYXBocWwiLAogICAgIlNlcnZlclJlc291cmNlRG93bmxvYWRCYXNlIjogImh0dHA6Ly8xMjQuMjIxLjMuMTE2OjEwNDQzIiwKICAgICJTZXJ2ZXJQaG90b25NYXN0ZXJBZGRyZXNzIjogImh0dHA6Ly8xMjQuMjIxLjMuMTE2OjQ1MzAiCn0=
 ```
 
 ``` title="Dynamite: Reboot"
@@ -37,10 +37,10 @@ ssewogICAgIlNlcnZlcklkIjogInJlYm9vdCIsCiAgICAiU2VydmVyR3JhcGhxbEJhY2tlbmQiOiAiaH
     // 建议仅使用英文大小写和数字
     "ServerId": "Explode",
     // 后端地址 - 服务器地址
-    "ServerGraphqlBackend": "http://34.92.242.92:10443/graphql",
+    "ServerGraphqlBackend": "http://124.221.3.116:10443/graphql",
     // 资源地址 - 访问和下载游戏数据的根地址
-    "ServerResourceDownloadBase": "http://34.92.242.92:10443",
+    "ServerResourceDownloadBase": "http://124.221.3.116:10443",
     // 联机服务器地址 - 处理联机相关事务的服务器地址
-    "ServerPhotonMasterAddress": null
+    "ServerPhotonMasterAddress": "http://124.221.3.116:4530"
 }
 ```
